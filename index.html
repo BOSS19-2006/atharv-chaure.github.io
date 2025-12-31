@@ -1,155 +1,221 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atharv Chaure | AI Product Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #eef2ff, #f8fafc);
-  color: #1f2937;
-  scroll-behavior: smooth;
-}
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#objective">Objective</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#case-studies">Case Studies</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-/* NAVBAR */
-.navbar {
-  position: sticky;
-  top: 0;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  z-index: 1000;
-}
+<!-- HERO -->
+<header class="hero fade-up">
+  <h1>Atharv Chaure</h1>
+  <p>Aspiring AI Product Manager</p>
+  <span>Building AI products that create real business impact</span>
+</header>
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 10px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
+<div class="container">
 
-.navbar a {
-  text-decoration: none;
-  color: #1f2937;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
+  <!-- INTRODUCTION -->
+  <section id="introduction" class="fade-up">
+    <h2>Introduction</h2>
+    <p>
+      I am a Computer Science & Engineering student and an aspiring
+      <strong>AI Product Manager</strong> with hands-on exposure to AI-driven
+      product thinking, marketplaces, and ad-tech platforms.
+      Certified by <strong>IBM & Microsoft</strong> in AI Product Management.
+    </p>
+  </section>
 
-.navbar a:hover, .navbar a.active { background: #e0e7ff; }
+  <!-- CAREER OBJECTIVE -->
+  <section id="objective" class="fade-up">
+    <h2>Career Objective</h2>
+    <p>
+      To work as an <strong>AI Product Manager / Associate Product Manager</strong>
+      where I can build user-centric AI products, bridge technology and
+      business, and scale products from <strong>0 → 1</strong> and
+      <strong>1 → N</strong>.
+    </p>
+  </section>
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #4f46e5, #06b6d4);
-  color: white;
-  border-radius: 0 0 20px 20px;
-}
+  <!-- CORE SKILLS -->
+  <section id="skills" class="fade-up">
+    <h2>Core Skills</h2>
+    <div class="grid">
+      <div class="card fade-up">
+        <h3>Product Management</h3>
+        <ul>
+          <li>Product Discovery & Problem Framing</li>
+          <li>Vision & Roadmapping</li>
+          <li>PRDs & User Stories</li>
+          <li>RICE / MoSCoW</li>
+          <li>Agile & Scrum Practices</li>
+        </ul>
+      </div>
+      <div class="card fade-up">
+        <h3>AI Product Skills</h3>
+        <ul>
+          <li>AI Use Case Identification</li>
+          <li>Generative AI & Prompt Design</li>
+          <li>Model Lifecycle Awareness</li>
+          <li>Responsible AI Principles</li>
+        </ul>
+      </div>
+      <div class="card fade-up">
+        <h3>Business & Strategy</h3>
+        <ul>
+          <li>Market Research</li>
+          <li>Monetization Models</li>
+          <li>Go-To-Market Strategy</li>
+          <li>KPI Definition & Success Metrics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-.hero h1 { font-size: 42px; margin-bottom: 10px; }
-.hero p { font-size: 20px; margin-bottom: 8px; }
-.hero span { font-size: 14px; opacity: 0.9; }
+  <!-- PRODUCT EXPERIENCE -->
+  <section id="experience" class="fade-up">
+    <h2>Product Experience</h2>
+    <div class="highlight fade-up">
+      <h3>Adnivio – AI Marketplace & Ad Platform</h3>
+      <p><strong>Role:</strong> Founder & Product Manager</p>
+      <p>
+        Built a zero-commission marketplace combined with an AI-powered advertising platform for SMEs.
+      </p>
+      <ul>
+        <li>AI Product Description Generator</li>
+        <li>Seller Analytics Dashboard</li>
+        <li>In-app Advertising & Budget Control</li>
+      </ul>
+      <p class="metrics">
+        📉 40% faster onboarding &nbsp; | &nbsp; 📈 30% better ad efficiency
+      </p>
+    </div>
+  </section>
 
-/* CONTAINER */
-.container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+  <!-- AI CASE STUDIES -->
+  <section id="case-studies" class="fade-up">
+    <h2>AI Case Studies</h2>
+    <div class="grid">
+      <div class="card fade-up">
+        <h3>AI Product Description Generator</h3>
+        <p>
+          Reduced listing creation time by ~65% and improved seller onboarding completion through generative AI.
+        </p>
+      </div>
+      <div class="card fade-up">
+        <h3>AI Ad Performance Scoring (Concept)</h3>
+        <p>
+          Designed AI-based scoring using CTR, conversions, and spend efficiency to improve ROAS.
+        </p>
+      </div>
+    </div>
+  </section>
 
-/* SECTIONS */
-section { margin-bottom: 50px; }
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="fade-up">
+    <h2>Certifications</h2>
+    <ul class="badges fade-up">
+      <li>IBM – AI Product Manager</li>
+      <li>Microsoft – AI Product Management</li>
+    </ul>
+  </section>
 
-/* GRID */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; }
+  <!-- TOOLS -->
+  <section id="tools" class="fade-up">
+    <h2>Tools & Technologies</h2>
+    <ul class="badges fade-up">
+      <li>Notion</li>
+      <li>Figma</li>
+      <li>Firebase</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>OpenAI APIs</li>
+    </ul>
+  </section>
 
-/* CARDS */
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  <!-- CONTACT -->
+  <section id="contact" class="contact fade-up">
+    <h2>Contact</h2>
+    <p>📧 atharv.business19@gmail.com</p>
+    <p>
+      🔗 <a href="https://www.linkedin.com/in/atharv-chaure-0a676932a" target="_blank">
+        LinkedIn Profile
+      </a>
+    </p>
+  </section>
 
-.card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-.card h3 { color: #2563eb; }
+</div>
 
-.highlight {
-  background: linear-gradient(135deg, #eef2ff, #ecfeff);
-  padding: 30px;
-  border-radius: 16px;
-  border-left: 6px solid #4f46e5;
-}
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollTopBtn">↑</button>
 
-.metrics { margin-top: 15px; font-weight: 600; }
+<footer>
+  © 2025 Atharv Chaure · AI Product Manager
+</footer>
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-}
+<script>
+  // Smooth scroll for navbar links
+  document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 
-.badges li {
-  background: #e0e7ff;
-  color: #3730a3;
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 500;
-}
+  // Fade-up animation on scroll
+  const faders = document.querySelectorAll('.fade-up');
+  const appearOptions = { threshold: 0.1 };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
 
-a { text-decoration: none; color: #2563eb; font-weight: 600; }
-a:hover { text-decoration: underline; }
+  // Active navbar link highlighting
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.navbar a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      if(pageYOffset >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if(link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
 
-.contact {
-  background: linear-gradient(135deg, #4f46e5, #06b6d4);
-  color: white;
-  padding: 30px;
-  border-radius: 16px;
-}
+  // Scroll-to-top button
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 300) scrollTopBtn.style.display = 'block';
+    else scrollTopBtn.style.display = 'none';
+  });
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-  color: #6b7280;
-}
-
-/* FADE-UP ANIMATION */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-up.appear {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* SCROLL-TO-TOP BUTTON */
-#scrollTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 999;
-  background: #4f46e5;
-  color: white;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: background 0.3s;
-}
-
-#scrollTopBtn:hover { background: #06b6d4; }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 34px; }
-  .hero p { font-size: 18px; }
-  .navbar ul { flex-direction: column; gap: 10px; }
-}
+</body>
+</html>
