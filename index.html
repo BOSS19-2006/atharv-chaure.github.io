@@ -18,7 +18,7 @@
 <div class="container">
 
   <!-- INTRODUCTION -->
-  <section class="fade-in">
+  <section>
     <h2>Introduction</h2>
     <p>
       I am a Computer Science & Engineering student and an aspiring
@@ -29,7 +29,7 @@
   </section>
 
   <!-- CAREER OBJECTIVE -->
-  <section class="fade-in">
+  <section>
     <h2>Career Objective</h2>
     <p>
       To work as an <strong>AI Product Manager / Associate Product Manager</strong>
@@ -40,7 +40,7 @@
   </section>
 
   <!-- CORE SKILLS -->
-  <section class="fade-in">
+  <section>
     <h2>Core Skills</h2>
     <div class="grid">
       <div class="card">
@@ -59,7 +59,7 @@
           <li>AI Use Case Identification</li>
           <li>Generative AI & Prompt Design</li>
           <li>Model Lifecycle Awareness</li>
-          <li>Responsible AI</li>
+          <li>Responsible AI Principles</li>
         </ul>
       </div>
       <div class="card">
@@ -68,14 +68,14 @@
           <li>Market Research</li>
           <li>Monetization Models</li>
           <li>Go-To-Market Strategy</li>
-          <li>KPI Definition</li>
+          <li>KPI Definition & Success Metrics</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- PRODUCT EXPERIENCE -->
-  <section class="fade-in">
+  <section>
     <h2>Product Experience</h2>
     <div class="highlight">
       <h3>Adnivio – AI Marketplace & Ad Platform</h3>
@@ -97,7 +97,7 @@
   </section>
 
   <!-- AI CASE STUDIES -->
-  <section class="fade-in">
+  <section>
     <h2>AI Case Studies</h2>
     <div class="grid">
       <div class="card">
@@ -118,7 +118,7 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section class="fade-in">
+  <section>
     <h2>Certifications</h2>
     <ul class="badges">
       <li>IBM – AI Product Manager</li>
@@ -127,7 +127,7 @@
   </section>
 
   <!-- TOOLS -->
-  <section class="fade-in">
+  <section>
     <h2>Tools & Technologies</h2>
     <ul class="badges">
       <li>Notion</li>
@@ -140,7 +140,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="fade-in contact">
+  <section class="contact">
     <h2>Contact</h2>
     <p>📧 atharv.business19@gmail.com</p>
     <p>
@@ -152,42 +152,9 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   © 2025 Atharv Chaure · AI Product Manager
 </footer>
-
-<!-- ANIMATIONS SCRIPT -->
-<script>
-  // Fade-in on scroll
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-  };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.classList.add('appear');
-      observer.unobserve(entry);
-    });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-
-  // Smooth scroll for anchor links (if needed)
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
 
 </body>
 </html>
