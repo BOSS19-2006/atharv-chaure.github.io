@@ -8,6 +8,20 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#objective">Objective</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#case-studies">Case Studies</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 <!-- HERO -->
 <header class="hero fade-up">
   <h1>Atharv Chaure</h1>
@@ -18,7 +32,7 @@
 <div class="container">
 
   <!-- INTRODUCTION -->
-  <section class="fade-up">
+  <section id="introduction" class="fade-up">
     <h2>Introduction</h2>
     <p>
       I am a Computer Science & Engineering student and an aspiring
@@ -29,7 +43,7 @@
   </section>
 
   <!-- CAREER OBJECTIVE -->
-  <section class="fade-up">
+  <section id="objective" class="fade-up">
     <h2>Career Objective</h2>
     <p>
       To work as an <strong>AI Product Manager / Associate Product Manager</strong>
@@ -40,7 +54,7 @@
   </section>
 
   <!-- CORE SKILLS -->
-  <section class="fade-up">
+  <section id="skills" class="fade-up">
     <h2>Core Skills</h2>
     <div class="grid">
       <div class="card fade-up">
@@ -75,14 +89,13 @@
   </section>
 
   <!-- PRODUCT EXPERIENCE -->
-  <section class="fade-up">
+  <section id="experience" class="fade-up">
     <h2>Product Experience</h2>
     <div class="highlight fade-up">
       <h3>Adnivio – AI Marketplace & Ad Platform</h3>
       <p><strong>Role:</strong> Founder & Product Manager</p>
       <p>
-        Built a zero-commission marketplace combined with an
-        AI-powered advertising platform for SMEs.
+        Built a zero-commission marketplace combined with an AI-powered advertising platform for SMEs.
       </p>
       <ul>
         <li>AI Product Description Generator</li>
@@ -90,35 +103,32 @@
         <li>In-app Advertising & Budget Control</li>
       </ul>
       <p class="metrics">
-        📉 40% faster onboarding &nbsp; | &nbsp;
-        📈 30% better ad efficiency
+        📉 40% faster onboarding &nbsp; | &nbsp; 📈 30% better ad efficiency
       </p>
     </div>
   </section>
 
   <!-- AI CASE STUDIES -->
-  <section class="fade-up">
+  <section id="case-studies" class="fade-up">
     <h2>AI Case Studies</h2>
     <div class="grid">
       <div class="card fade-up">
         <h3>AI Product Description Generator</h3>
         <p>
-          Reduced listing creation time by ~65% and improved seller
-          onboarding completion through generative AI.
+          Reduced listing creation time by ~65% and improved seller onboarding completion through generative AI.
         </p>
       </div>
       <div class="card fade-up">
         <h3>AI Ad Performance Scoring (Concept)</h3>
         <p>
-          Designed AI-based scoring using CTR, conversions, and spend
-          efficiency to improve ROAS.
+          Designed AI-based scoring using CTR, conversions, and spend efficiency to improve ROAS.
         </p>
       </div>
     </div>
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section class="fade-up">
+  <section id="certifications" class="fade-up">
     <h2>Certifications</h2>
     <ul class="badges fade-up">
       <li>IBM – AI Product Manager</li>
@@ -127,7 +137,7 @@
   </section>
 
   <!-- TOOLS -->
-  <section class="fade-up">
+  <section id="tools" class="fade-up">
     <h2>Tools & Technologies</h2>
     <ul class="badges fade-up">
       <li>Notion</li>
@@ -140,7 +150,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="contact fade-up">
+  <section id="contact" class="contact fade-up">
     <h2>Contact</h2>
     <p>📧 atharv.business19@gmail.com</p>
     <p>
@@ -152,25 +162,59 @@
 
 </div>
 
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollTopBtn">↑</button>
+
 <footer>
   © 2025 Atharv Chaure · AI Product Manager
 </footer>
 
 <script>
+  // Smooth scroll for navbar links
+  document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
   // Fade-up animation on scroll
   const faders = document.querySelectorAll('.fade-up');
-  const options = { threshold: 0.1 };
-
-  const observer = new IntersectionObserver((entries, observer) => {
+  const appearOptions = { threshold: 0.1 };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
-        entry.classList.add('appear');
-        observer.unobserve(entry);
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
       }
     });
-  }, options);
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
 
-  faders.forEach(fader => observer.observe(fader));
+  // Active navbar link highlighting
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.navbar a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      if(pageYOffset >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if(link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
+
+  // Scroll-to-top button
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 300) scrollTopBtn.style.display = 'block';
+    else scrollTopBtn.style.display = 'none';
+  });
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 </script>
 
 </body>
