@@ -9,7 +9,7 @@
 <body>
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero fade-up">
   <h1>Atharv Chaure</h1>
   <p>Aspiring AI Product Manager</p>
   <span>Building AI products that create real business impact</span>
@@ -18,7 +18,7 @@
 <div class="container">
 
   <!-- INTRODUCTION -->
-  <section>
+  <section class="fade-up">
     <h2>Introduction</h2>
     <p>
       I am a Computer Science & Engineering student and an aspiring
@@ -29,7 +29,7 @@
   </section>
 
   <!-- CAREER OBJECTIVE -->
-  <section>
+  <section class="fade-up">
     <h2>Career Objective</h2>
     <p>
       To work as an <strong>AI Product Manager / Associate Product Manager</strong>
@@ -40,10 +40,10 @@
   </section>
 
   <!-- CORE SKILLS -->
-  <section>
+  <section class="fade-up">
     <h2>Core Skills</h2>
     <div class="grid">
-      <div class="card">
+      <div class="card fade-up">
         <h3>Product Management</h3>
         <ul>
           <li>Product Discovery & Problem Framing</li>
@@ -53,7 +53,7 @@
           <li>Agile & Scrum Practices</li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card fade-up">
         <h3>AI Product Skills</h3>
         <ul>
           <li>AI Use Case Identification</li>
@@ -62,7 +62,7 @@
           <li>Responsible AI Principles</li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card fade-up">
         <h3>Business & Strategy</h3>
         <ul>
           <li>Market Research</li>
@@ -75,9 +75,9 @@
   </section>
 
   <!-- PRODUCT EXPERIENCE -->
-  <section>
+  <section class="fade-up">
     <h2>Product Experience</h2>
-    <div class="highlight">
+    <div class="highlight fade-up">
       <h3>Adnivio – AI Marketplace & Ad Platform</h3>
       <p><strong>Role:</strong> Founder & Product Manager</p>
       <p>
@@ -97,17 +97,17 @@
   </section>
 
   <!-- AI CASE STUDIES -->
-  <section>
+  <section class="fade-up">
     <h2>AI Case Studies</h2>
     <div class="grid">
-      <div class="card">
+      <div class="card fade-up">
         <h3>AI Product Description Generator</h3>
         <p>
           Reduced listing creation time by ~65% and improved seller
           onboarding completion through generative AI.
         </p>
       </div>
-      <div class="card">
+      <div class="card fade-up">
         <h3>AI Ad Performance Scoring (Concept)</h3>
         <p>
           Designed AI-based scoring using CTR, conversions, and spend
@@ -118,18 +118,18 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section>
+  <section class="fade-up">
     <h2>Certifications</h2>
-    <ul class="badges">
+    <ul class="badges fade-up">
       <li>IBM – AI Product Manager</li>
       <li>Microsoft – AI Product Management</li>
     </ul>
   </section>
 
   <!-- TOOLS -->
-  <section>
+  <section class="fade-up">
     <h2>Tools & Technologies</h2>
-    <ul class="badges">
+    <ul class="badges fade-up">
       <li>Notion</li>
       <li>Figma</li>
       <li>Firebase</li>
@@ -140,7 +140,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="contact">
+  <section class="contact fade-up">
     <h2>Contact</h2>
     <p>📧 atharv.business19@gmail.com</p>
     <p>
@@ -155,6 +155,23 @@
 <footer>
   © 2025 Atharv Chaure · AI Product Manager
 </footer>
+
+<script>
+  // Fade-up animation on scroll
+  const faders = document.querySelectorAll('.fade-up');
+  const options = { threshold: 0.1 };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.classList.add('appear');
+        observer.unobserve(entry);
+      }
+    });
+  }, options);
+
+  faders.forEach(fader => observer.observe(fader));
+</script>
 
 </body>
 </html>
