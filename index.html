@@ -19,7 +19,7 @@
 <div class="container">
 
     <!-- INTRO -->
-    <section>
+    <section class="fade-in">
         <h2>Introduction</h2>
         <p>
             I am a Computer Science & Engineering student and an aspiring
@@ -30,7 +30,7 @@
     </section>
 
     <!-- OBJECTIVE -->
-    <section>
+    <section class="fade-in">
         <h2>Career Objective</h2>
         <p>
             To work as an <strong>AI Product Manager / Associate Product Manager</strong>
@@ -41,9 +41,8 @@
     </section>
 
     <!-- SKILLS -->
-    <section>
+    <section class="fade-in">
         <h2>Core Skills</h2>
-
         <div class="grid">
             <div class="card">
                 <h3>Product Management</h3>
@@ -52,10 +51,9 @@
                     <li>Vision & Roadmapping</li>
                     <li>PRDs & User Stories</li>
                     <li>RICE / MoSCoW</li>
-                    <li>Agile & Scrum</li>
+                    <li>Agile & Scrum Practices</li>
                 </ul>
             </div>
-
             <div class="card">
                 <h3>AI Product Skills</h3>
                 <ul>
@@ -65,7 +63,6 @@
                     <li>Responsible AI</li>
                 </ul>
             </div>
-
             <div class="card">
                 <h3>Business & Strategy</h3>
                 <ul>
@@ -79,24 +76,20 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section>
+    <section class="fade-in">
         <h2>Product Experience</h2>
-
         <div class="highlight">
             <h3>Adnivio – AI Marketplace & Ad Platform</h3>
             <p><strong>Role:</strong> Founder & Product Manager</p>
-
             <p>
                 Built a zero-commission marketplace combined with an
                 AI-powered advertising platform for SMEs.
             </p>
-
             <ul>
                 <li>AI Product Description Generator</li>
                 <li>Seller Analytics Dashboard</li>
                 <li>In-app Advertising & Budget Control</li>
             </ul>
-
             <p class="metrics">
                 📉 40% faster onboarding &nbsp; | &nbsp;
                 📈 30% better ad efficiency
@@ -105,28 +98,28 @@
     </section>
 
     <!-- CASE STUDIES -->
-    <section>
+    <section class="fade-in">
         <h2>AI Case Studies</h2>
-
-        <div class="card">
-            <h3>AI Product Description Generator</h3>
-            <p>
-                Reduced listing creation time by ~65% and improved seller
-                onboarding completion through generative AI.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>AI Ad Performance Scoring (Concept)</h3>
-            <p>
-                Designed AI-based scoring using CTR, conversions, and spend
-                efficiency to improve ROAS.
-            </p>
+        <div class="grid">
+            <div class="card">
+                <h3>AI Product Description Generator</h3>
+                <p>
+                    Reduced listing creation time by ~65% and improved seller
+                    onboarding completion through generative AI.
+                </p>
+            </div>
+            <div class="card">
+                <h3>AI Ad Performance Scoring (Concept)</h3>
+                <p>
+                    Designed AI-based scoring using CTR, conversions, and spend
+                    efficiency to improve ROAS.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- CERTIFICATIONS -->
-    <section>
+    <section class="fade-in">
         <h2>Certifications</h2>
         <ul class="badges">
             <li>IBM – AI Product Manager</li>
@@ -135,7 +128,7 @@
     </section>
 
     <!-- TOOLS -->
-    <section>
+    <section class="fade-in">
         <h2>Tools & Technologies</h2>
         <ul class="badges">
             <li>Notion</li>
@@ -148,7 +141,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact">
+    <section class="fade-in contact">
         <h2>Contact</h2>
         <p>📧 atharv.business19@gmail.com</p>
         <p>
@@ -163,6 +156,37 @@
 <footer>
     © 2025 Atharv Chaure · AI Product Manager
 </footer>
+
+<script>
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.classList.add('appear');
+            observer.unobserve(entry);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
