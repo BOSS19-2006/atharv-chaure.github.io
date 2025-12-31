@@ -1,168 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atharv Chaure | AI Product Manager</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-<body>
+* {
+    box-sizing: border-box;
+}
 
-<!-- HERO -->
-<header class="hero">
-    <h1>Atharv Chaure</h1>
-    <p>Aspiring AI Product Manager</p>
-    <span>Building AI products that create real business impact</span>
-</header>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #eef2ff, #f8fafc);
+    color: #1f2937;
+    scroll-behavior: smooth;
+}
 
-<div class="container">
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    color: white;
+}
 
-    <!-- INTRO -->
-    <section>
-        <h2>Introduction</h2>
-        <p>
-            I am a Computer Science & Engineering student and an aspiring
-            <strong>AI Product Manager</strong> with hands-on exposure to AI-driven
-            product thinking, marketplaces, and ad-tech platforms.
-            Certified by <strong>IBM & Microsoft</strong> in AI Product Management.
-        </p>
-    </section>
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
 
-    <!-- OBJECTIVE -->
-    <section>
-        <h2>Career Objective</h2>
-        <p>
-            To work as an <strong>AI Product Manager / Associate Product Manager</strong>
-            where I can build user-centric AI products, bridge technology and
-            business, and scale products from <strong>0 → 1</strong> and
-            <strong>1 → N</strong>.
-        </p>
-    </section>
+.hero p {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
 
-    <!-- SKILLS -->
-    <section>
-        <h2>Core Skills</h2>
+.hero span {
+    font-size: 14px;
+    opacity: 0.9;
+}
 
-        <div class="grid">
-            <div class="card">
-                <h3>Product Management</h3>
-                <ul>
-                    <li>Product Discovery & Problem Framing</li>
-                    <li>Vision & Roadmapping</li>
-                    <li>PRDs & User Stories</li>
-                    <li>RICE / MoSCoW</li>
-                    <li>Agile & Scrum</li>
-                </ul>
-            </div>
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
 
-            <div class="card">
-                <h3>AI Product Skills</h3>
-                <ul>
-                    <li>AI Use Case Identification</li>
-                    <li>Generative AI & Prompt Design</li>
-                    <li>Model Lifecycle Awareness</li>
-                    <li>Responsible AI</li>
-                </ul>
-            </div>
+/* SECTIONS */
+section {
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
 
-            <div class="card">
-                <h3>Business & Strategy</h3>
-                <ul>
-                    <li>Market Research</li>
-                    <li>Monetization Models</li>
-                    <li>Go-To-Market Strategy</li>
-                    <li>KPI Definition</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+section.appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
 
-    <!-- EXPERIENCE -->
-    <section>
-        <h2>Product Experience</h2>
+section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #4338ca;
+}
 
-        <div class="highlight">
-            <h3>Adnivio – AI Marketplace & Ad Platform</h3>
-            <p><strong>Role:</strong> Founder & Product Manager</p>
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
 
-            <p>
-                Built a zero-commission marketplace combined with an
-                AI-powered advertising platform for SMEs.
-            </p>
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-            <ul>
-                <li>AI Product Description Generator</li>
-                <li>Seller Analytics Dashboard</li>
-                <li>In-app Advertising & Budget Control</li>
-            </ul>
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
 
-            <p class="metrics">
-                📉 40% faster onboarding &nbsp; | &nbsp;
-                📈 30% better ad efficiency
-            </p>
-        </div>
-    </section>
+.card h3 {
+    color: #2563eb;
+}
 
-    <!-- CASE STUDIES -->
-    <section>
-        <h2>AI Case Studies</h2>
+/* HIGHLIGHT */
+.highlight {
+    background: linear-gradient(135deg, #eef2ff, #ecfeff);
+    padding: 30px;
+    border-radius: 16px;
+    border-left: 6px solid #4f46e5;
+}
 
-        <div class="card">
-            <h3>AI Product Description Generator</h3>
-            <p>
-                Reduced listing creation time by ~65% and improved seller
-                onboarding completion through generative AI.
-            </p>
-        </div>
+/* METRICS */
+.metrics {
+    margin-top: 15px;
+    font-weight: 600;
+}
 
-        <div class="card">
-            <h3>AI Ad Performance Scoring (Concept)</h3>
-            <p>
-                Designed AI-based scoring using CTR, conversions, and spend
-                efficiency to improve ROAS.
-            </p>
-        </div>
-    </section>
+/* BADGES */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+}
 
-    <!-- CERTIFICATIONS -->
-    <section>
-        <h2>Certifications</h2>
-        <ul class="badges">
-            <li>IBM – AI Product Manager</li>
-            <li>Microsoft – AI Product Management</li>
-        </ul>
-    </section>
+.badges li {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-    <!-- TOOLS -->
-    <section>
-        <h2>Tools & Technologies</h2>
-        <ul class="badges">
-            <li>Notion</li>
-            <li>Figma</li>
-            <li>Firebase</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>OpenAI APIs</li>
-        </ul>
-    </section>
+/* LINKS */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-    <!-- CONTACT -->
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>📧 atharv.business19@gmail.com</p>
-        <p>
-            🔗 <a href="https://www.linkedin.com/in/atharv-chaure-0a676932a" target="_blank">
-                LinkedIn Profile
-            </a>
-        </p>
-    </section>
+a:hover {
+    text-decoration: underline;
+}
 
-</div>
+/* CONTACT */
+.contact {
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    color: white;
+    padding: 30px;
+    border-radius: 16px;
+}
 
-<footer>
-    © 2025 Atharv Chaure · AI Product Manager
-</footer>
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #6b7280;
+}
 
-</body>
-</html>
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 34px; }
+    .hero p { font-size: 18px; }
+}
