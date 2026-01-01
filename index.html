@@ -3,163 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Atharv Chaure | Java Developer</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <title>Atharv Chaure | AI Product Manager</title>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 
 <body>
-
-<!-- PAGE TRANSITION OVERLAY -->
-<div id="pageTransition"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-container">
     <div class="logo">Atharv</div>
+
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#timeline">Journey</a></li>
-      <li><a href="#projects">Project</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero parallax">
-  <div class="hero-bg">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-
-    <i class="fab fa-java float-icon i1"></i>
-    <i class="fa-solid fa-code float-icon i2"></i>
-    <i class="fa-solid fa-cube float-icon i3"></i>
-  </div>
-
+<header class="hero reveal">
   <div class="hero-content">
     <h1>Atharv Chaure</h1>
-    <h2>Aspiring <span class="typed"></span></h2>
+    <h2>I am <span class="typed-text"></span></h2>
     <p>
-      Java-focused Computer Science student building scalable, product-driven software
-      with strong engineering fundamentals.
+      I build AI-powered products that solve real business problems,
+      scale marketplaces, and deliver measurable impact.
     </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="#contact" class="btn outline">Contact Me</a>
+    </div>
   </div>
 </header>
 
 <main class="container">
 
 <!-- ABOUT -->
-<section id="about" class="section reveal parallax">
+<section id="about" class="reveal">
   <h3>About Me</h3>
   <p>
     I am a Computer Science & Engineering student and an aspiring
-    <strong>Java Developer</strong>.  
-    I enjoy building structured, scalable systems and long-term products
-    with clean architecture and real-world usability.
+    <strong>AI Product Manager</strong> with hands-on experience in
+    AI-driven marketplaces and ad-tech platforms.
+    Professionally certified by <strong>Microsoft</strong> and
+    <strong>IBM</strong> in AI Product Management.
   </p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section reveal parallax">
+<section id="skills" class="reveal">
   <h3>Core Skills</h3>
-
   <div class="grid">
-    <div class="card skill">
-      <h4>Java Development</h4>
-      <div class="bar"><span style="width:90%"></span></div>
+    <div class="card skill-card">
+      <h4>Product Management</h4>
+      <div class="skill-bar"><span style="width:90%">90%</span></div>
+      <ul>
+        <li>Product Discovery & Problem Framing</li>
+        <li>PRDs & User Stories</li>
+        <li>Roadmapping & Prioritization</li>
+      </ul>
     </div>
 
-    <div class="card skill">
-      <h4>Product Thinking</h4>
-      <div class="bar"><span style="width:85%"></span></div>
+    <div class="card skill-card">
+      <h4>AI & Data</h4>
+      <div class="skill-bar"><span style="width:85%">85%</span></div>
+      <ul>
+        <li>AI Use Case Identification</li>
+        <li>Generative AI</li>
+        <li>Prompt Engineering</li>
+      </ul>
     </div>
 
-    <div class="card skill">
-      <h4>AI & Data Understanding</h4>
-      <div class="bar"><span style="width:80%"></span></div>
-    </div>
-
-    <div class="card skill">
-      <h4>Business Strategy</h4>
-      <div class="bar"><span style="width:75%"></span></div>
-    </div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section id="timeline" class="section reveal parallax">
-  <h3>My Journey</h3>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <span></span>
-      <h4>2023</h4>
-      <p>Started Computer Science & Engineering</p>
-    </div>
-
-    <div class="timeline-item">
-      <span></span>
-      <h4>2024</h4>
-      <p>Explored Java, system design & product thinking</p>
-    </div>
-
-    <div class="timeline-item">
-      <span></span>
-      <h4>2025</h4>
-      <p>Built Adnivio & earned Microsoft + IBM certifications</p>
+    <div class="card skill-card">
+      <h4>Business & Strategy</h4>
+      <div class="skill-bar"><span style="width:80%">80%</span></div>
+      <ul>
+        <li>Market Research</li>
+        <li>Go-To-Market Strategy</li>
+        <li>KPIs & Metrics</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- PROJECT -->
-<section id="projects" class="section reveal parallax">
-  <h3>Featured Project</h3>
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <h3>Featured Projects</h3>
+  <div class="grid">
+    <div class="card project-card">
+      <img src="https://via.placeholder.com/400x200.png?text=Adnivio" alt="Adnivio Screenshot"/>
+      <h4>Adnivio</h4>
+      <p>AI-powered zero-commission marketplace combined with in-app advertising platform for SMEs.</p>
+      <ul>
+        <li>AI product description generator</li>
+        <li>Seller analytics dashboard</li>
+        <li>In-app ad performance & budget control</li>
+      </ul>
+    </div>
 
-  <div class="project-card tilt">
-    <img src="https://via.placeholder.com/800x350.png?text=Adnivio+Platform" alt="Adnivio">
-    <h4>Adnivio</h4>
-    <p>
-      AI-powered zero-commission marketplace with in-app advertising
-      to empower small businesses.
-    </p>
-
-    <div class="metrics">
-      <div class="metric">
-        <span class="counter" data-target="40">0</span>%<p>Faster Onboarding</p>
-      </div>
-      <div class="metric">
-        <span class="counter" data-target="30">0</span>%<p>Better Ad Efficiency</p>
-      </div>
-      <div class="metric">
-        <span class="counter" data-target="2">0</span>x<p>Seller Growth</p>
-      </div>
+    <div class="card project-card">
+      <img src="https://via.placeholder.com/400x200.png?text=AI+Ad+Scoring" alt="AI Ad Performance"/>
+      <h4>AI Ad Performance Scoring</h4>
+      <p>Conceptual AI system to score ad performance using CTR, conversions, and spend efficiency to improve ROAS.</p>
     </div>
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="certifications" class="section reveal parallax">
+<section id="certifications" class="reveal">
   <h3>Certifications</h3>
-
   <div class="grid">
-    <a class="card cert" target="_blank"
+    <a class="card cert-card" target="_blank"
        href="https://www.coursera.org/account/accomplishments/specialization/EOW2883ZYWIA">
-      <i class="fab fa-microsoft"></i>
+      <i class="fa-brands fa-microsoft fa-2x"></i>
       <h4>Microsoft</h4>
-      <p>AI Product Management</p>
+      <p>AI Product Management Specialization</p>
+      <span>View Certificate →</span>
     </a>
 
-    <a class="card cert" target="_blank"
+    <a class="card cert-card" target="_blank"
        href="https://www.coursera.org/account/accomplishments/specialization/8Y8SBLIQ8DPS">
-      <i class="fab fa-ibm"></i>
+      <i class="fa-brands fa-ibm fa-2x"></i>
       <h4>IBM</h4>
-      <p>AI Product Management</p>
+      <p>AI Product Management Professional Certificate</p>
+      <span>View Certificate →</span>
     </a>
   </div>
 </section>
@@ -167,83 +142,64 @@
 <!-- CONTACT -->
 <section id="contact" class="contact reveal">
   <h3>Contact</h3>
-  <p>atharv.business19@gmail.com</p>
+  <p>Email: <strong>atharv.business19@gmail.com</strong></p>
+  <div class="social-icons">
+    <a target="_blank" href="https://www.linkedin.com/in/atharv-chaure-0a676932a"><i class="fab fa-linkedin fa-lg"></i></a>
+    <a target="_blank" href="https://github.com/boss19-2006"><i class="fab fa-github fa-lg"></i></a>
+    <a href="mailto:atharv.business19@gmail.com"><i class="fa fa-envelope fa-lg"></i></a>
+  </div>
 </section>
 
 </main>
 
 <footer>
-  © 2025 Atharv Chaure · Java Developer
+  © 2025 Atharv Chaure · AI Product Manager
 </footer>
 
-<!-- ================= JS (MERGED) ================= -->
+<!-- SCRIPTS -->
 <script>
-/* PAGE TRANSITION */
-window.addEventListener("load", () => {
-  document.getElementById("pageTransition").classList.add("hide");
-});
-
-/* TYPING */
-const text = "Java Developer";
-let i = 0;
-const typed = document.querySelector(".typed");
-(function type() {
-  if (i <= text.length) {
-    typed.textContent = text.slice(0, i++);
-    setTimeout(type, 120);
+  // Scroll Reveal
+  const reveals = document.querySelectorAll('.reveal');
+  function revealOnScroll() {
+    reveals.forEach((el, i) => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 120) {
+        setTimeout(() => el.classList.add('active'), i * 150);
+      }
+    });
   }
-})();
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
 
-/* REVEAL */
-const reveals = document.querySelectorAll(".reveal");
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-      el.classList.add("active");
+  // Dark Mode Toggle
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+  });
+
+  // Typing animation
+  const roles = ["AI Product Manager", "Founder", "Marketplace Builder"];
+  const typedText = document.querySelector(".typed-text");
+  let roleIndex = 0, charIndex = 0;
+  function typeRole() {
+    if(charIndex <= roles[roleIndex].length){
+      typedText.textContent = roles[roleIndex].substring(0, charIndex++);
+      setTimeout(typeRole, 120);
+    } else {
+      setTimeout(eraseRole, 1000);
     }
-  });
-});
-
-/* COUNTERS */
-document.querySelectorAll(".counter").forEach(counter => {
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) {
-      let count = 0;
-      const target = +counter.dataset.target;
-      const update = () => {
-        if (count < target) {
-          count++;
-          counter.textContent = count;
-          requestAnimationFrame(update);
-        }
-      };
-      update();
-      observer.disconnect();
+  }
+  function eraseRole() {
+    if(charIndex >= 0){
+      typedText.textContent = roles[roleIndex].substring(0, charIndex--);
+      setTimeout(eraseRole, 60);
+    } else {
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeRole, 200);
     }
-  });
-  observer.observe(counter);
-});
-
-/* 3D TILT */
-const card = document.querySelector(".tilt");
-card.addEventListener("mousemove", e => {
-  const r = card.getBoundingClientRect();
-  const x = e.clientX - r.left;
-  const y = e.clientY - r.top;
-  card.style.transform =
-    `rotateX(${-(y/r.height-0.5)*10}deg) rotateY(${(x/r.width-0.5)*10}deg)`;
-});
-card.addEventListener("mouseleave", () => {
-  card.style.transform = "rotateX(0) rotateY(0)";
-});
-
-/* PARALLAX */
-document.addEventListener("mousemove", e => {
-  document.querySelectorAll(".parallax").forEach(layer => {
-    layer.style.transform =
-      `translate(${e.clientX * 0.005}px, ${e.clientY * 0.005}px)`;
-  });
-});
+  }
+  typeRole();
 </script>
 
 </body>
