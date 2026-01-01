@@ -22,7 +22,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <button id="themeToggle">🌙</button>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </nav>
 
@@ -34,7 +34,7 @@
 
     <p>
       I build AI-powered products that solve real business problems,
-      scale marketplaces, and create measurable impact.
+      scale marketplaces, and deliver measurable impact.
     </p>
 
     <div class="hero-actions">
@@ -52,9 +52,9 @@
   <p>
     I am a Computer Science & Engineering student and an aspiring
     <strong>AI Product Manager</strong> with hands-on experience in
-    building AI-driven marketplaces and ad-tech platforms.
-    I have completed professional certifications from
-    <strong>Microsoft</strong> and <strong>IBM</strong> in AI Product Management.
+    AI-driven marketplaces and ad-tech platforms.
+    I am professionally certified by <strong>Microsoft</strong> and
+    <strong>IBM</strong> in AI Product Management.
   </p>
 </section>
 
@@ -109,14 +109,14 @@
       <ul>
         <li>AI product description generator</li>
         <li>Seller analytics dashboard</li>
-        <li>In-app ad budget & performance control</li>
+        <li>In-app ad performance & budget control</li>
       </ul>
     </div>
 
     <div class="card">
       <h4>AI Ad Performance Scoring</h4>
       <p>
-        Conceptual AI system to score ad performance using CTR,
+        Designed a conceptual AI scoring system using CTR,
         conversions, and spend efficiency to improve ROAS.
       </p>
     </div>
@@ -128,14 +128,14 @@
   <h3>Certifications</h3>
 
   <div class="grid">
-    <a class="card link-card" target="_blank"
+    <a class="card cert-card" target="_blank"
        href="https://www.coursera.org/account/accomplishments/specialization/EOW2883ZYWIA">
       <h4>Microsoft</h4>
       <p>AI Product Management Specialization</p>
       <span>View Certificate →</span>
     </a>
 
-    <a class="card link-card" target="_blank"
+    <a class="card cert-card" target="_blank"
        href="https://www.coursera.org/account/accomplishments/specialization/8Y8SBLIQ8DPS">
       <h4>IBM</h4>
       <p>AI Product Management Professional Certificate</p>
@@ -163,14 +163,14 @@
   © 2025 Atharv Chaure · AI Product Manager
 </footer>
 
-<!-- SCRIPTS -->
+<!-- JS -->
 <script>
   /* Scroll Reveal */
   const reveals = document.querySelectorAll('.reveal');
   function revealOnScroll() {
     reveals.forEach(el => {
       const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
+      if (top < window.innerHeight - 120) {
         el.classList.add('active');
       }
     });
@@ -180,11 +180,11 @@
 
   /* Dark Mode */
   const toggle = document.getElementById('themeToggle');
-  toggle.onclick = () => {
+  toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     toggle.textContent =
       document.body.classList.contains('dark') ? '☀️' : '🌙';
-  };
+  });
 </script>
 
 </body>
