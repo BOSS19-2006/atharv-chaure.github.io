@@ -11,20 +11,25 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: white;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  background: white;
   padding: 12px 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   z-index: 1000;
 }
 
+.nav-left {
+  font-weight: 700;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 15px;
-  padding: 0;
+  gap: 16px;
   margin: 0;
+  padding: 0;
 }
 
 .navbar a {
@@ -34,10 +39,10 @@ body {
 }
 
 #themeToggle {
-  border: none;
   background: none;
-  font-size: 18px;
+  border: none;
   cursor: pointer;
+  font-size: 18px;
 }
 
 /* HERO */
@@ -48,17 +53,22 @@ body {
   color: white;
 }
 
-/* STATS */
-.stats {
+.hero h2 {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* IMPACT */
+.impact {
   display: flex;
   justify-content: space-around;
   background: #eef2ff;
   padding: 30px;
 }
 
-.stat span {
+.impact-box strong {
+  font-size: 22px;
   display: block;
-  font-size: 14px;
 }
 
 /* CONTAINER */
@@ -68,13 +78,14 @@ body {
   padding: 40px 20px;
 }
 
-/* GRID & CARDS */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
+/* CARDS */
 .card {
   background: white;
   padding: 24px;
@@ -82,11 +93,28 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
+.card:hover {
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+
 /* HIGHLIGHT */
 .highlight {
   background: linear-gradient(135deg, #eef2ff, #ecfeff);
   padding: 30px;
   border-radius: 16px;
+}
+
+.metrics {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.decision {
+  margin-top: 14px;
+  background: #e0e7ff;
+  padding: 14px;
+  border-radius: 10px;
 }
 
 /* PROCESS */
@@ -99,11 +127,19 @@ body {
 /* TIMELINE */
 .timeline {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
 .timeline li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+/* NOTE */
+.note {
+  margin-top: 15px;
+  padding: 14px;
+  background: #eef2ff;
+  border-left: 4px solid #4f46e5;
 }
 
 /* CONTACT */
@@ -127,6 +163,7 @@ footer {
   transform: translateY(30px);
   transition: 0.8s;
 }
+
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
@@ -137,8 +174,10 @@ body.dark {
   background: #0f172a;
   color: #e5e7eb;
 }
+
 body.dark .navbar,
 body.dark .card,
-body.dark .highlight {
+body.dark .highlight,
+body.dark .note {
   background: #020617;
 }
