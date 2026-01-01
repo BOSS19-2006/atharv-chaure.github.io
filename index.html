@@ -1,225 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atharv Chaure | AI Product Manager</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-<body>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #eef2ff, #f8fafc);
+  color: #1f2937;
+}
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-left">Atharv</div>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#impact">Impact</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#journey">Journey</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button id="themeToggle">🌙</button>
-</nav>
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
 
-<!-- HERO -->
-<header class="hero reveal">
-  <h1>Atharv Chaure</h1>
-  <h2>AI Product Management · Java · Marketplace Systems</h2>
-  <p>
-    Aspiring AI Product Manager focused on building scalable,
-    AI-driven marketplace products with real business impact.
-  </p>
-</header>
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
 
-<!-- IMPACT -->
-<section id="impact" class="impact reveal">
-  <div class="impact-box">
-    <strong>3+</strong>
-    <span>Products Built</span>
-  </div>
-  <div class="impact-box">
-    <strong>2</strong>
-    <span>AI Systems Designed</span>
-  </div>
-  <div class="impact-box">
-    <strong>40%</strong>
-    <span>Faster Onboarding</span>
-  </div>
-  <div class="impact-box">
-    <strong>Microsoft & IBM</strong>
-    <span>Certified</span>
-  </div>
-</section>
+.navbar a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+}
 
-<div class="container">
+#themeToggle {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
 
-<!-- ABOUT -->
-<section id="about" class="reveal">
-  <h3>About Me</h3>
-  <p>
-    I am a Computer Science & Engineering student and an aspiring
-    <strong>AI Product Manager</strong> with hands-on exposure to AI-driven
-    product thinking, marketplaces, and ad-tech platforms.
-  </p>
-  <p>
-    I am also an <strong>aspiring Java developer</strong>, currently focusing on
-    strengthening my core programming fundamentals while building
-    real-world, AI-powered products.
-  </p>
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+}
 
-  <div class="note">
-    <strong>Professional Intent:</strong> I focus on real product thinking —
-    identifying problems, validating solutions, and measuring impact.
-  </div>
-</section>
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: #eef2ff;
+  padding: 30px;
+}
 
-<!-- SKILLS -->
-<section id="skills" class="reveal">
-  <h3>What I Bring to Product Teams</h3>
+.stat span {
+  display: block;
+  font-size: 14px;
+}
 
-  <div class="grid">
-    <div class="card reveal">
-      <h4>Product Management</h4>
-      <ul>
-        <li>Problem Discovery & Framing</li>
-        <li>PRDs & User Stories</li>
-        <li>Roadmapping & Prioritization</li>
-        <li>Agile & Scrum Practices</li>
-      </ul>
-    </div>
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    <div class="card reveal">
-      <h4>AI Product Skills</h4>
-      <ul>
-        <li>Generative AI Use Cases</li>
-        <li>Prompt Design</li>
-        <li>Model Lifecycle Awareness</li>
-        <li>Responsible AI Thinking</li>
-      </ul>
-    </div>
+/* GRID & CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
 
-    <div class="card reveal">
-      <h4>Business & Strategy</h4>
-      <ul>
-        <li>Market Research</li>
-        <li>Monetization Models</li>
-        <li>KPI Definition</li>
-        <li>Go-To-Market Basics</li>
-      </ul>
-    </div>
-  </div>
-</section>
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
 
-<!-- PROJECTS -->
-<section id="projects" class="reveal">
-  <h3>Real Products I’ve Built</h3>
+/* HIGHLIGHT */
+.highlight {
+  background: linear-gradient(135deg, #eef2ff, #ecfeff);
+  padding: 30px;
+  border-radius: 16px;
+}
 
-  <div class="highlight reveal">
-    <h4>Adnivio — AI Marketplace & Ad Platform</h4>
-    <p><strong>Role:</strong> Founder & Product Manager</p>
+/* PROCESS */
+.process {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
 
-    <ul>
-      <li>Designed AI-powered product description generator</li>
-      <li>Built seller analytics dashboard for ad performance</li>
-      <li>Integrated in-app advertising with budget control</li>
-    </ul>
+/* TIMELINE */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+}
 
-    <p class="metrics">
-      📈 Reduced listing creation time by ~65% <br />
-      🚀 Improved seller onboarding speed by ~40%
-    </p>
+.timeline li {
+  margin-bottom: 12px;
+}
 
-    <div class="decision">
-      <strong>Product Decision:</strong>
-      Used generative AI instead of rule-based templates to reduce
-      seller friction and improve content quality.
-    </div>
-  </div>
-</section>
+/* CONTACT */
+.contact {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+  padding: 30px;
+  border-radius: 16px;
+}
 
-<!-- PROCESS -->
-<section id="process" class="reveal">
-  <h3>How I Think as a Product Manager</h3>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
 
-  <div class="process">
-    <div>🔍 Identify real user problems</div>
-    <div>📊 Validate assumptions</div>
-    <div>🧠 Design AI-first solutions</div>
-    <div>📈 Measure impact with metrics</div>
-  </div>
-</section>
+/* ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-<!-- JOURNEY -->
-<section id="journey" class="reveal">
-  <h3>My Journey</h3>
-  <ul class="timeline">
-    <li><strong>2024</strong> — Started CSE & Java fundamentals</li>
-    <li><strong>2024</strong> — Explored AI product concepts</li>
-    <li><strong>2025</strong> — Built Adnivio marketplace</li>
-    <li><strong>2025</strong> — Microsoft & IBM AI PM Certified</li>
-  </ul>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="reveal">
-  <h3>Certifications</h3>
-
-  <div class="grid">
-    <a class="card cert"
-       target="_blank"
-       href="https://www.coursera.org/account/accomplishments/specialization/EOW2883ZYWIA">
-      Microsoft – AI Product Management
-    </a>
-
-    <a class="card cert"
-       target="_blank"
-       href="https://www.coursera.org/account/accomplishments/specialization/8Y8SBLIQ8DPS">
-      IBM – AI Product Manager
-    </a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact reveal">
-  <h3>Contact</h3>
-  <p>📧 atharv.business19@gmail.com</p>
-  <p>
-    🔗 <a target="_blank"
-      href="https://www.linkedin.com/in/atharv-chaure-0a676932a">
-      LinkedIn Profile</a>
-  </p>
-</section>
-
-</div>
-
-<footer>
-  © 2025 Atharv Chaure · Built with clarity & intent
-</footer>
-
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const toggle = document.getElementById('themeToggle');
-
-  function revealOnScroll() {
-    reveals.forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight - 80) {
-        el.classList.add('active');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll();
-
-  toggle.onclick = () => {
-    document.body.classList.toggle('dark');
-    toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-  };
-</script>
-
-</body>
-</html>
+/* DARK MODE */
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+body.dark .navbar,
+body.dark .card,
+body.dark .highlight {
+  background: #020617;
+}
