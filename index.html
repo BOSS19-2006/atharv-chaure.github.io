@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Atharv Chaure | Java Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Cursor -->
+<!-- Custom Cursor -->
 <div class="cursor"></div>
 
 <!-- Scroll Progress -->
@@ -17,148 +17,133 @@
 <!-- Navbar -->
 <header class="nav glass">
   <h1>Atharv</h1>
-  <button id="glassToggle" class="magnetic">Glass</button>
+  <button id="modeToggle">Glass</button>
 </header>
 
 <main class="snap-container">
 
 <!-- HERO -->
 <section class="hero snap">
-  <div class="mesh"></div>
+  <div class="bg-gradient"></div>
 
   <div class="blob b1"></div>
   <div class="blob b2"></div>
 
   <div class="hero-content reveal">
     <h2>Hi, I’m <span>Atharv</span></h2>
-    <p class="typing"></p>
-    <button class="magnetic">Explore Work</button>
+    <p>Aspiring Java Developer & AI Product Builder</p>
+    <button class="magnetic">View Work</button>
   </div>
 
   <div class="orbit">
-    <span>☕</span><span>🤖</span><span>💻</span><span>⚙️</span>
+    <span>☕</span>
+    <span>🤖</span>
+    <span>💻</span>
+    <span>⚙️</span>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="snap reveal">
-  <h2>About</h2>
+<section class="about snap reveal">
+  <h2>About Me</h2>
   <p>
-    Aspiring Java developer and AI product builder focused on scalable systems,
-    clean architecture, and business-driven engineering.
+    I am an aspiring Java developer passionate about scalable systems,
+    AI-powered products, and business-driven engineering.
   </p>
 </section>
 
 <!-- CERTIFICATIONS -->
-<section class="snap reveal">
+<section class="certifications snap reveal">
   <h2>Certifications</h2>
   <div class="cards">
-    <a class="card glass magnetic tilt"
-       href="https://www.coursera.org/account/accomplishments/specialization/EOW2883ZYWIA"
-       target="_blank">
-       Microsoft AI Product Management
+    <a class="card glass magnetic" target="_blank"
+      href="https://www.coursera.org/account/accomplishments/specialization/EOW2883ZYWIA">
+      Microsoft AI Product Management
     </a>
 
-    <a class="card glass magnetic tilt"
-       href="https://www.coursera.org/account/accomplishments/specialization/8Y8SBLIQ8DPS"
-       target="_blank">
-       IBM AI Professional Certificate
+    <a class="card glass magnetic" target="_blank"
+      href="https://www.coursera.org/account/accomplishments/specialization/8Y8SBLIQ8DPS">
+      IBM AI Professional Certificate
     </a>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="snap reveal">
-  <h2>Let’s Build</h2>
+<section class="contact snap reveal">
+  <h2>Let’s Build Something Big</h2>
   <button class="magnetic">Contact Me</button>
 </section>
 
 </main>
 
 <script>
-/* ===== CURSOR ===== */
+/* ================= CURSOR ================= */
 const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', e => {
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';
 });
 
-document.querySelectorAll('button,a').forEach(el=>{
-  el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));
-  el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'));
+/* Cursor interaction */
+document.querySelectorAll('button, a').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
 });
 
-/* ===== MAGNETIC ===== */
-document.querySelectorAll('.magnetic').forEach(btn=>{
-  btn.addEventListener('mousemove',e=>{
+/* ================= MAGNETIC ================= */
+document.querySelectorAll('.magnetic').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
     const r = btn.getBoundingClientRect();
-    btn.style.transform =
-      `translate(${(e.clientX-r.left-r.width/2)*0.3}px,
-                 ${(e.clientY-r.top-r.height/2)*0.3}px)`;
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
   });
-  btn.addEventListener('mouseleave',()=>btn.style.transform='translate(0,0)');
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'translate(0,0)';
+  });
 });
 
-/* ===== TYPING ===== */
-const roles=[
-  "Aspiring Java Developer",
-  "AI Product Builder",
-  "Founder Mindset"
-];
-let i=0,j=0,del=false;
-const typing=document.querySelector('.typing');
-
-setInterval(()=>{
-  typing.textContent = roles[i].slice(0,j);
-  if(!del && j++===roles[i].length+5) del=true;
-  if(del && j--===0){ del=false; i=(i+1)%roles.length; }
-},100);
-
-/* ===== ORBIT ===== */
-let angle=0;
-setInterval(()=>{
-  document.querySelectorAll('.orbit span').forEach((el,i)=>{
-    el.style.transform =
-      `translate(${Math.cos(angle+i)*80}px,${Math.sin(angle+i)*80}px)`;
-  });
-  angle+=0.02;
-},30);
-
-/* ===== PARALLAX BLOBS ===== */
-document.addEventListener('mousemove',e=>{
-  document.querySelectorAll('.blob').forEach((b,i)=>{
+/* ================= PARALLAX ================= */
+document.addEventListener('mousemove', e => {
+  document.querySelectorAll('.blob').forEach((b,i) => {
     b.style.transform =
-      `translate(${e.clientX*0.01*(i+1)}px,${e.clientY*0.01*(i+1)}px)`;
+      `translate(${e.clientX * 0.01 * (i+1)}px, ${e.clientY * 0.01 * (i+1)}px)`;
   });
 });
 
-/* ===== SCROLL ===== */
-const scroller=document.querySelector('.snap-container');
-const progress=document.querySelector('.scroll-progress');
-scroller.addEventListener('scroll',()=>{
-  progress.style.width=
-    (scroller.scrollTop/(scroller.scrollHeight-scroller.clientHeight))*100+'%';
-});
-
-/* ===== REVEAL ===== */
-const obs=new IntersectionObserver(es=>{
-  es.forEach(e=>e.isIntersecting&&e.target.classList.add('active'));
-},{threshold:.2});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-/* ===== TILT ===== */
-document.querySelectorAll('.tilt').forEach(card=>{
-  card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect();
-    card.style.transform=
-      `rotateX(${-(e.clientY-r.top-r.height/2)/10}deg)
-       rotateY(${(e.clientX-r.left-r.width/2)/10}deg)`;
+/* ================= ORBIT ================= */
+const orbit = document.querySelectorAll('.orbit span');
+let angle = 0;
+setInterval(() => {
+  angle += 0.02;
+  orbit.forEach((icon, i) => {
+    const r = 80;
+    icon.style.transform =
+      `translate(${Math.cos(angle + i) * r}px, ${Math.sin(angle + i) * r}px)`;
   });
-  card.addEventListener('mouseleave',()=>card.style.transform='rotate(0)');
+}, 30);
+
+/* ================= SCROLL ================= */
+const scroller = document.querySelector('.snap-container');
+const progress = document.querySelector('.scroll-progress');
+
+scroller.addEventListener('scroll', () => {
+  progress.style.width =
+    (scroller.scrollTop / (scroller.scrollHeight - scroller.clientHeight)) * 100 + '%';
 });
 
-/* ===== GLASS ===== */
-document.getElementById('glassToggle').onclick=()=>{
+/* ================= REVEAL ================= */
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) e.target.classList.add('active');
+  });
+},{ threshold: 0.2 });
+
+revealEls.forEach(el => observer.observe(el));
+
+/* ================= MODE ================= */
+document.getElementById('modeToggle').onclick = () => {
   document.body.classList.toggle('glass-on');
 };
 </script>
