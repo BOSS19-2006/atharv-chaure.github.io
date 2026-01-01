@@ -1,85 +1,150 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui}
-body{background:#020617;color:#fff;overflow:hidden}
-
-/* Scroll */
-.snap-container{
-  height:100vh;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
 }
-.snap{
-  height:100vh;
-  padding:6rem;
-  scroll-snap-align:start;
-  position:relative;
+
+body {
+  background: #020617;
+  color: white;
+  overflow: hidden;
+}
+
+/* Scroll snap */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Sections */
+.snap {
+  height: 100vh;
+  padding: 6rem;
+  scroll-snap-align: start;
+  position: relative;
 }
 
 /* Navbar */
-.nav{
-  position:fixed;top:1rem;left:50%;
-  transform:translateX(-50%);
-  padding:1rem 2rem;
-  z-index:100;
+.nav {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  z-index: 100;
 }
 
 /* Glass */
-.glass{
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(18px);
-  border-radius:20px;
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
 }
 
 /* Hero */
-.hero{display:flex;align-items:center;justify-content:center;text-align:center}
-.hero h2 span{color:#3b82f6}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-/* Mesh bg */
-.mesh{
-  position:absolute;inset:0;
-  background:
-    radial-gradient(circle at 20% 20%,#1e3a8a,transparent),
-    radial-gradient(circle at 80% 80%,#0ea5e9,transparent);
-  z-index:-2;
+.hero-content h2 span {
+  color: #3b82f6;
+}
+
+/* Gradient bg */
+.bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, #1e3a8a, transparent);
+  z-index: -2;
 }
 
 /* Blobs */
-.blob{
-  position:absolute;width:350px;height:350px;
-  background:linear-gradient(45deg,#3b82f6,#0ea5e9);
-  filter:blur(120px);opacity:.5;
+.blob {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(45deg,#3b82f6,#0ea5e9);
+  filter: blur(100px);
+  opacity: 0.5;
 }
-.b1{top:10%;left:10%}
-.b2{bottom:15%;right:15%}
+
+.b1 { top: 15%; left: 10%; }
+.b2 { bottom: 20%; right: 10%; }
 
 /* Orbit */
-.orbit{position:absolute;width:200px;height:200px}
-.orbit span{position:absolute;font-size:1.8rem;opacity:.7}
+.orbit {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+}
+
+.orbit span {
+  position: absolute;
+  font-size: 1.8rem;
+  opacity: 0.7;
+}
 
 /* Buttons */
-button,.card{
-  background:#2563eb;color:#fff;
-  padding:14px 34px;border-radius:40px;
-  border:none;cursor:pointer;
+button, .card {
+  background: #2563eb;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
 }
 
 /* Cards */
-.cards{display:flex;gap:2rem}
-.card{text-decoration:none}
+.cards {
+  display: flex;
+  gap: 2rem;
+}
+
+.card {
+  text-decoration: none;
+}
 
 /* Cursor */
-.cursor{
-  width:18px;height:18px;border:2px solid #3b82f6;
-  border-radius:50%;position:fixed;pointer-events:none;
-  transition:.2s;z-index:999
+.cursor {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  transition: transform .2s, background .2s;
 }
-.cursor.hover{transform:scale(2.5);background:rgba(59,130,246,.2)}
+
+.cursor.hover {
+  transform: scale(2.5);
+  background: rgba(59,130,246,0.2);
+}
 
 /* Reveal */
-.reveal{opacity:0;transform:translateY(40px);transition:1s}
-.reveal.active{opacity:1;transform:none}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
 
-/* Scroll bar */
-.scroll-progress{
-  position:fixed;top:0;left:0;height:3px;
-  background:#3b82f6;width:0;z-index:999
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll progress */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #3b82f6;
+  width: 0;
+  z-index: 999;
 }
