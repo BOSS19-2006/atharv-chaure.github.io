@@ -1,196 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atharv Chaure | AI Product Manager</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atharv Chaure | AI Product Manager & Java Developer</title>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <ul>
-    <li><a href="#introduction">About</a></li>
-    <li><a href="#stats">Impact</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#timeline">Journey</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button id="themeToggle">🌙</button>
+  <div class="nav-container">
+    <div class="logo">Atharv</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+  </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero reveal">
-  <h1>Atharv Chaure</h1>
-  <p>Aspiring AI Product Manager</p>
-  <span>Building AI-driven products with real business impact</span>
+<header class="hero">
+  <div class="hero-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <i class="fab fa-java floating-icon icon1"></i>
+    <i class="fa-solid fa-robot floating-icon icon2"></i>
+  </div>
+  <div class="hero-content reveal">
+    <h1>Atharv Chaure</h1>
+    <h2>I am <span class="typed-text"></span></h2>
+    <p>
+      Building AI-powered products and Java applications that solve real problems and deliver measurable impact.
+    </p>
+    <div class="hero-actions">
+      <a href="resume.pdf" download class="btn primary">Download Resume</a>
+      <a href="#projects" class="btn outline">View Projects</a>
+    </div>
+  </div>
 </header>
 
-<!-- STATS -->
-<section id="stats" class="stats reveal">
-  <div class="stat">🚀 <strong>3+</strong><span>Products Built</span></div>
-  <div class="stat">🎯 <strong>2</strong><span>AI Systems Designed</span></div>
-  <div class="stat">🎓 <strong>2</strong><span>Global Certifications</span></div>
-  <div class="stat">💡 <strong>AdTech</strong><span>Marketplace Focus</span></div>
-</section>
-
-<div class="container">
+<main class="container">
 
 <!-- ABOUT -->
-<section id="introduction" class="reveal">
-  <h2>About Me</h2>
+<section id="about" class="reveal">
+  <h3>About Me</h3>
   <p>
-    I am a Computer Science & Engineering student and an aspiring
-    <strong>AI Product Manager</strong> with hands-on exposure to AI-driven
-    product thinking, marketplaces, and ad-tech platforms.
+    I am a Computer Science & Engineering student and an aspiring 
+    <strong>AI Product Manager</strong> and <strong>Java Developer</strong> 
+    with hands-on experience in AI-driven marketplaces and ad-tech platforms.
+    Professionally certified by <strong>Microsoft</strong> and 
+    <strong>IBM</strong> in AI Product Management. I enjoy building products 
+    that solve real business problems and scale marketplaces efficiently.
   </p>
-  <p>
-    I am also an <strong>aspiring Java developer</strong>, currently focusing on
-    strengthening my core programming skills while building real-world,
-    AI-driven products.
-  </p>
-</section>
-
-<!-- FOCUS -->
-<section class="focus reveal">
-  <h2>Current Focus</h2>
-  <ul>
-    <li>📌 Mastering Java & problem-solving fundamentals</li>
-    <li>📌 Building AI-first marketplace products</li>
-    <li>📌 Improving product sense & business strategy</li>
-  </ul>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="reveal">
-  <h2>Core Skills</h2>
+  <h3>Core Skills</h3>
   <div class="grid">
-    <div class="card reveal">
-      <h3>Product Management</h3>
+    <div class="card skill-card">
+      <h4><i class="fa-solid fa-diagram-project"></i> Product Management</h4>
+      <div class="skill-bar"><span style="width:90%">90%</span></div>
       <ul>
-        <li>Product Discovery</li>
+        <li>Product Discovery & Problem Framing</li>
         <li>PRDs & User Stories</li>
-        <li>Roadmapping</li>
-        <li>Agile & Scrum</li>
+        <li>Roadmapping & Prioritization</li>
       </ul>
     </div>
-
-    <div class="card reveal">
-      <h3>AI Product Skills</h3>
+    <div class="card skill-card">
+      <h4><i class="fa-solid fa-robot"></i> AI & Data</h4>
+      <div class="skill-bar"><span style="width:85%">85%</span></div>
       <ul>
+        <li>AI Use Case Identification</li>
         <li>Generative AI</li>
-        <li>Prompt Design</li>
-        <li>Model Lifecycle Awareness</li>
-        <li>Responsible AI</li>
+        <li>Prompt Engineering</li>
       </ul>
     </div>
-
-    <div class="card reveal">
-      <h3>Business & Strategy</h3>
+    <div class="card skill-card">
+      <h4><i class="fa-brands fa-java"></i> Java Development</h4>
+      <div class="skill-bar"><span style="width:75%">75%</span></div>
+      <ul>
+        <li>Core Java & OOP</li>
+        <li>Data Structures & Algorithms</li>
+        <li>Java-based Projects</li>
+      </ul>
+    </div>
+    <div class="card skill-card">
+      <h4><i class="fa-solid fa-chart-line"></i> Business & Strategy</h4>
+      <div class="skill-bar"><span style="width:80%">80%</span></div>
       <ul>
         <li>Market Research</li>
-        <li>Monetization</li>
+        <li>Go-To-Market Strategy</li>
         <li>KPIs & Metrics</li>
-        <li>Go-To-Market</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="reveal">
-  <h2>Product Experience</h2>
-  <div class="highlight reveal">
-    <h3>Adnivio – AI Marketplace & Ad Platform</h3>
-    <p><strong>Role:</strong> Founder & Product Manager</p>
-    <ul>
-      <li>AI Product Description Generator</li>
-      <li>Seller Analytics Dashboard</li>
-      <li>In-app Advertising System</li>
-    </ul>
-    <p class="metrics">📈 40% faster onboarding · 📉 30% better ad efficiency</p>
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <h3>Featured Projects</h3>
+  <div class="grid">
+    <div class="card project-card">
+      <img src="https://via.placeholder.com/400x200.png?text=Adnivio" alt="Adnivio Screenshot"/>
+      <h4>Adnivio</h4>
+      <p>AI-powered zero-commission marketplace combined with in-app advertising platform for SMEs.</p>
+      <ul>
+        <li>AI product description generator</li>
+        <li>Seller analytics dashboard</li>
+        <li>In-app ad performance & budget control</li>
+      </ul>
+      <p class="metrics">🚀 40% faster onboarding | 📈 30% better ad efficiency</p>
+    </div>
+    <div class="card project-card">
+      <img src="https://via.placeholder.com/400x200.png?text=Java+App" alt="Java Project"/>
+      <h4>Java Project Example</h4>
+      <p>Built a Java-based desktop application for task management and automation.</p>
+      <ul>
+        <li>OOP & Design Patterns</li>
+        <li>File Handling & Database Integration</li>
+      </ul>
+    </div>
   </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="reveal">
-  <h2>How I Build Products</h2>
-  <div class="process">
-    <div>🔍 Identify Real Problems</div>
-    <div>📊 Validate with Users</div>
-    <div>🧠 Design AI Solution</div>
-    <div>📈 Measure Impact</div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section id="timeline" class="reveal">
-  <h2>My Journey</h2>
-  <ul class="timeline">
-    <li><strong>2024:</strong> Started CSE & Java</li>
-    <li><strong>2024:</strong> Built first AI concepts</li>
-    <li><strong>2025:</strong> Built Adnivio</li>
-    <li><strong>2025:</strong> Microsoft & IBM Certified</li>
-  </ul>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications" class="reveal">
-  <h2>Certifications</h2>
+  <h3>Certifications</h3>
   <div class="grid">
-    <a class="card cert" target="_blank"
+    <a class="card cert-card" target="_blank"
        href="https://www.coursera.org/account/accomplishments/specialization/EOW2883ZYWIA">
-      Microsoft – AI Product Management
+      <i class="fa-brands fa-microsoft fa-2x"></i>
+      <h4>Microsoft</h4>
+      <p>AI Product Management Specialization</p>
+      <span>View Certificate →</span>
     </a>
 
-    <a class="card cert" target="_blank"
+    <a class="card cert-card" target="_blank"
        href="https://www.coursera.org/account/accomplishments/specialization/8Y8SBLIQ8DPS">
-      IBM – AI Product Manager
+      <i class="fa-brands fa-ibm fa-2x"></i>
+      <h4>IBM</h4>
+      <p>AI Product Management Professional Certificate</p>
+      <span>View Certificate →</span>
     </a>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact reveal">
-  <h2>Contact</h2>
-  <p>📧 atharv.business19@gmail.com</p>
-  <p>
-    🔗 <a target="_blank"
-      href="https://www.linkedin.com/in/atharv-chaure-0a676932a">
-      LinkedIn Profile</a>
-  </p>
+  <h3>Contact Me</h3>
+  <p>Email: <strong>atharv.business19@gmail.com</strong></p>
+  <div class="social-icons">
+    <a target="_blank" href="https://www.linkedin.com/in/atharv-chaure-0a676932a"><i class="fab fa-linkedin fa-lg"></i></a>
+    <a target="_blank" href="https://github.com/boss19-2006"><i class="fab fa-github fa-lg"></i></a>
+    <a href="mailto:atharv.business19@gmail.com"><i class="fa fa-envelope fa-lg"></i></a>
+  </div>
 </section>
 
-</div>
+<!-- SCROLL TO TOP -->
+<button id="scrollTopBtn">↑</button>
 
 <footer>
-  © 2025 Atharv Chaure · AI Product Manager
+  © 2025 Atharv Chaure · AI Product Manager & Java Developer
 </footer>
 
+<!-- JS -->
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const toggle = document.getElementById('themeToggle');
+// Scroll Reveal
+const reveals = document.querySelectorAll('.reveal');
+function revealOnScroll() {
+  reveals.forEach((el,i)=>{
+    const top = el.getBoundingClientRect().top;
+    if(top<window.innerHeight-120){ setTimeout(()=> el.classList.add('active'), i*150);}
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
 
-  function revealOnScroll() {
-    reveals.forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight - 80) {
-        el.classList.add('active');
-      }
-    });
+// Dark Mode Toggle
+const toggle = document.getElementById('themeToggle');
+toggle.addEventListener('click', ()=>{
+  document.body.classList.toggle('dark');
+  toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+});
+
+// Typing Animation
+const roles = ["AI Product Manager", "Java Developer", "Founder", "Marketplace Builder"];
+const typedText = document.querySelector(".typed-text");
+let roleIndex=0,charIndex=0;
+function typeRole(){
+  if(charIndex<=roles[roleIndex].length){
+    typedText.textContent = roles[roleIndex].substring(0,charIndex++);
+    setTimeout(typeRole,120);
+  } else { setTimeout(eraseRole,1000); }
+}
+function eraseRole(){
+  if(charIndex>=0){
+    typedText.textContent = roles[roleIndex].substring(0,charIndex--);
+    setTimeout(eraseRole,60);
+  } else {
+    roleIndex=(roleIndex+1)%roles.length;
+    setTimeout(typeRole,200);
   }
+}
+typeRole();
 
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll();
-
-  toggle.onclick = () => {
-    document.body.classList.toggle('dark');
-    toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-  };
+// Scroll to top
+const scrollTopBtn=document.getElementById('scrollTopBtn');
+window.addEventListener('scroll',()=>{scrollTopBtn.style.display=window.scrollY>300?'block':'none';});
+scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 
 </body>
